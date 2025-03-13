@@ -231,7 +231,8 @@ def main():
                        help='指定输出目录，默认使用图片所在目录')
     args = parser.parse_args()
 
-    output_dir = args.output_dir or "/Users/jiangxin/Downloads/misocr/pdf2mymd/output"
+    # 修改这里，使用相对路径
+    output_dir = args.output_dir or "output"
     processor = PDFToMarkdown(output_dir)
     
     if args.image:
