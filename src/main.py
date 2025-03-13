@@ -221,10 +221,13 @@ def main():
     parser.add_argument('--pdf', type=str, help='指定单个PDF文件路径')
     parser.add_argument('--image', type=str, help='指定单张图片路径')  # 新增参数
     parser.add_argument('--batch', action='store_true', help='批量处理PDF文件')
+    # 修改这里的默认路径
     parser.add_argument('--input-dir', type=str, 
-                       default="/Users/jiangxin/Downloads/misocr/pdf2mymd/input",
+                       default="input",  # 改为相对路径
                        help='指定批量处理的输入目录，默认为 input/')
+    
     parser.add_argument('--output-dir', type=str,
+                       default="output",  # 改为相对路径
                        help='指定输出目录，默认使用图片所在目录')
     args = parser.parse_args()
 
